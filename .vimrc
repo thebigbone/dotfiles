@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 colorscheme pablo
+set splitbelow
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
@@ -43,3 +44,10 @@ nnoremap <leader>pv :Vex<CR>
 " Enable lsp for go by using gopls
 let g:completor_filetype_map = {}
 let g:completor_filetype_map.go = {'ft': 'lsp', 'cmd': 'gopls -remote=auto'}"
+
+" delete inside ()
+nnoremap qq di(
+
+" map bn and bp
+nnoremap <A-Left> :tabprevious<CR>
+nnoremap <A-Right> :tabnext<CR>
